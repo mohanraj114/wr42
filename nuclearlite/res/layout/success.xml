@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical" 
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:gravity="center">
+		<TextView android:id="@+id/successtxt"
+		   	android:layout_width="fill_parent" 
+		   	android:layout_height="wrap_content" 
+		   	android:text="MISSION CLEARED!"
+		   	android:textSize="18sp"
+		   	android:gravity="center"
+		   	android:layout_marginBottom="30dp"
+		/>
+		<TableLayout android:id="@+id/relativeLayout1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+		<Button 
+			android:textColor="#000000" 
+			android:text=" NEXT MISSION " 
+			android:textSize="24dp" 
+			android:layout_height="wrap_content"
+			android:id="@+id/continuebutton" 
+			android:textStyle="bold"
+			android:layout_width="wrap_content"
+		android:layout_centerHorizontal="true"/>
+		
+		<Button 
+			android:textColor="#000000" 
+			android:text=" MENU " 
+			android:textSize="24dp" 
+			android:layout_height="wrap_content"
+			android:id="@+id/menubutton" 
+			android:textStyle="bold" android:layout_width="wrap_content" android:layout_centerHorizontal="true" android:layout_alignBottom="@+id/continuebutton"/>	
+		</TableLayout>
+</LinearLayout>
