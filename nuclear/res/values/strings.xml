@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="version">Version 0.1</string>
+    <string name="app_name">Nuclear</string>
+    <string name="instrtxt">NUCLEAR is a location based game intended to be played out in the real world using GPS-positioning. Clear out the Missions by using the Rad\'o\'meter instrument to locate targets. It roughly corresponds to the distance between the player and the target and also features sound. When the player is within reasonably close range of the target - the EMP function used to neutralize the target becomes available.</string>
+	<string name="credtxt">CREDITS:\n 	\n 	Concept, Programming &amp; Gfx\n 	Scalar @ Studio Coldstream\n 	\n 	Sounds By\n 	DJ Chronos, adcbicycle, NoiseCollector\n 	@ freesound.org\n 	\n 	Cheers To\n 	Ivan @ mindtherobot.com\n 	Freddy Martens &amp; StackOverflow	</string>
+</resources>

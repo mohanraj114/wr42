@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+	<questtag id="@drawable/allirog" namestr="Radioactive Isotope" minrange="100" maxrange="200" ttl="240">
+    	<questtext>Commander: Agent, one of our suspects have digested a radioactive isotope together with two unknown compounds. We have reason to believe this might trigger a chain reaction leading to some sort of bodily explosion. Investigate and disarm the targets pacemaker using your Rad'o'Meter and EMP Pulse! Over and Out.
+    	</questtext>   
+	</questtag>
+	<questtag id="@drawable/allirog" namestr="Nuclear Device" minrange="200" maxrange="300" ttl="300">
+    	<questtext>Commander: You are operative near the delta three sector and we have just received news that a group of terrorists have deployed a nuclear device nearby. Please make haste with this one! Over and Out.
+    	</questtext>   
+	</questtag>
+	<questtag id="@drawable/allirog" namestr="Broken Arrow" minrange="300" maxrange="500" ttl="600">
+		<questtext>Commander: Good work with that device agent! We have another urgent mission for you. I believe our military may have dropped a broken arrow in your area and you have to find it before it goes off. Over and Out.
+    	</questtext>
+    </questtag>
+    <questtag id="@drawable/allirog" namestr="Filthy bomb" minrange="500" maxrange="700" ttl="1200">
+		<questtext>Commander: We have reports coming in about suspicious behavior in your sector. A person may have hidden a dirty bomb and we need you to investigate at once. Over and out. 
+    	</questtext>
+    </questtag>
+    <questtag id="@drawable/allirog" namestr="Reactor" minrange="700" maxrange="1000" ttl="1800">
+		<questtext>Commander: A nearby nuclear reactor have been sabotaged. You need to retrieve a missing radioactive piece of equipment that were stolen. We believe it may be in your sector. Over and out. 
+    	</questtext>
+    </questtag>
+    <questtag id="@drawable/allirog" namestr="Hidden Silo" minrange="1000" maxrange="1400" ttl="2400">
+		<questtext>Commander: Agent, you are now in sector 1337. This is quite a bit of a walk, but a bit over a kilometers distance you will find a silo containing a nuclear missile. Use your Rad'O'Meter and take it out with the EMP. Good luck Agent!
+    	</questtext>
+    </questtag>
+    <questtag id="@drawable/allirog" namestr="Tic Tac Toe" minrange="1400" maxrange="2000" ttl="3599">
+		<questtext>Commander: We have been compromised!. Our supercomputer have been playing wargames and have now turned against us! It is trying to detonate a nuclear charge in our underground office. Try to get on top of us and blast it out with the EMP. Over...
+    	</questtext>
+    </questtag>
+</resources>

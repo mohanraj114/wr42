@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="coldstream.android.nuclear"
+      android:versionCode="1"
+      android:versionName="@string/version">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application android:icon="@drawable/nuclear" android:label="@string/app_name">
+    
+        <activity android:name=".nuclear"
+        		  android:screenOrientation="portrait"
+                  android:label="@string/app_name"
+                  android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+               <action android:name="android.intent.action.DEFAULT" />
+				<category android:name="android.intent.category.VIEW" />
+            </intent-filter>
+        </activity>
+		<activity android:name=".splash"
+				android:theme="@android:style/Theme.NoTitleBar"
+				android:label="@string/app_name"
+				android:screenOrientation="portrait">
+			<intent-filter>
+				
+				 <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity> 
+    </application>
+    <uses-sdk android:minSdkVersion="4" android:targetSdkVersion="4" />
+</manifest> 
