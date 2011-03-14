@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:mtr="http://schemas.android.com/apk/res/coldstream.android.nuclearlite"
+android:orientation="vertical" 
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+<TabHost android:id="@+id/edit_item_tab_host"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
+
+<TabWidget android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:id="@android:id/tabs"
+android:layout_gravity="bottom" />
+
+<FrameLayout
+android:id="@android:id/tabcontent"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:paddingBottom="65dp"> <!-- you need that if you don't want the tab content to overflow 65-->
+<RelativeLayout
+	android:id="@+id/main_tab"
+	android:orientation="vertical"
+	android:layout_height="fill_parent"
+	android:layout_width="fill_parent" android:background="@drawable/nuclearbg">
+	<RelativeLayout
+	android:id="@+id/maind_tab"
+	android:orientation="horizontal"
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	android:layout_gravity="center"
+	
+	>
+	 <TextView  
+            android:id="@+id/timer_text"  
+            android:layout_width="wrap_content"  
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"             
+            android:textSize="64dp"
+            android:textStyle="bold"
+            android:textColor="#009900"
+    		android:background="@drawable/plasticblack" android:layout_height="100dp" android:text="00:00:00 "/>
+	 <Button android:textColor="#000000" 
+	 android:textSize="28dp" 
+	 android:layout_height="wrap_content" 
+	 android:id="@+id/disarmbutton" 
+	 android:textStyle="bold" 
+	 android:layout_width="wrap_content" 
+	 android:layout_below="@+id/timer_text"
+	 android:layout_marginTop="20dp" 
+	 android:text="    FIRE EMP    " 
+	 android:layout_centerHorizontal="true"
+	 android:background="@drawable/missile">
+	 </Button> 
+   
+	</RelativeLayout>
+	<RelativeLayout 
+        android:id="@+id/InnerRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+	
+			
+		<coldstream.android.nuclearlite.Thermometer
+		    android:id="@+id/thermometer"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="10"
+			mtr:totalNotches="100"
+			mtr:incrementPerLargeNotch="20"
+			mtr:incrementPerSmallNotch="2"
+			mtr:scaleColor="0x9f004d0f"
+			mtr:scaleCenterValue="50"
+			mtr:scaleMinValue="0"
+			mtr:scaleMaxValue="100"
+			mtr:scaleUpperTitle="Rad'O'Meter"
+    	/>
+	
+	 </RelativeLayout>
+	
+	
+ </RelativeLayout>
+
+
+<LinearLayout
+	android:id="@+id/quest_tab"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="5px">
+		
+		<ImageView 
+		   		android:id="@+id/imageQuest"
+		   		android:layout_width="64px"
+		   		android:layout_height="64px"
+		   		android:layout_gravity="center"
+	   	/>
+	   	<TextView android:id="@+id/textQuest"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="lieu"
+			android:textStyle="bold"
+		/>
+</LinearLayout>
+
+
+<LinearLayout
+	android:id="@+id/status_tab"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:padding="5px">
+	<TextView 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="Current Session"
+    />
+    <TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="#888888">
+	</TableLayout>
+	<TextView android:id="@+id/textInfo"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="Loading..."
+    />
+    <TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="#888888">
+	</TableLayout>
+	<TextView 
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="Grand Total"
+    />
+    <TableLayout
+		android:layout_width="fill_parent"
+		android:layout_height="2dip"
+		android:background="#888888">
+	</TableLayout>
+	<TextView android:id="@+id/textInfo2"
+    	android:layout_width="fill_parent" 
+    	android:layout_height="wrap_content" 
+    	android:text="Loading..."
+    />
+	
+</LinearLayout>
+</FrameLayout>
+
+</TabHost>
+</LinearLayout>
