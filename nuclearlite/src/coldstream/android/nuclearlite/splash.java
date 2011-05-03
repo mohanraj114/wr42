@@ -1,8 +1,8 @@
 package coldstream.android.nuclearlite;
 
-
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 //import android.view.Menu;
@@ -39,11 +39,12 @@ public class splash extends Activity {
 		sb.append("Studio Coldstream");
 		sb.append('\n');
 		sb.append('\n');
-		sb.append("Disclaimer - Alfa release, please email comments and report bugs to:");
+		sb.append("Disclaimer - Beta release, please email comments and report bugs to:");
 		sb.append('\n');
 		sb.append("studio.coldstream@gmail.com");
 		sb.append('\n');
 		sb.append('\n');
+		sb.append("Version ");
 		sb.append(getString(R.string.version));
 		
 		introTxt.setText(sb.toString());
@@ -59,5 +60,12 @@ public class splash extends Activity {
 				splash.this.finish();
 			}
 		}, SPLASH_DISPLAY_LENGHT);
+	}
+	
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		Intent mainIntent = new Intent(splash.this,splash.class);
+		splash.this.startActivity(mainIntent);
+		splash.this.finish();
 	}
 }
