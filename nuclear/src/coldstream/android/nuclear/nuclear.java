@@ -1,10 +1,12 @@
 package coldstream.android.nuclear;
 
 import java.util.Random;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.LightingColorFilter;
 import android.graphics.Typeface;
@@ -122,9 +124,7 @@ public class nuclear extends Activity implements LocationListener{
 	PowerManager pm;
 	PowerManager.WakeLock wl;
 	
-	Vibrator vib; 
-
-	
+	Vibrator vib; 	
 	
 	/** Called when the activity is first created. */
 	@Override
@@ -180,6 +180,13 @@ public class nuclear extends Activity implements LocationListener{
         MediaPlayer mp = MediaPlayer.create(this, R.raw.ambiences9);
         mp.setLooping(false);
         mp.start();
+	}
+	
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		Intent mainIntent = new Intent(nuclear.this,nuclear.class);
+		nuclear.this.startActivity(mainIntent);
+		nuclear.this.finish();
 	}
 	
     public void setupMenu(){
