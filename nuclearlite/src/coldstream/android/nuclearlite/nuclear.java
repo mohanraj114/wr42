@@ -1,13 +1,17 @@
 package coldstream.android.nuclearlite;
 
+import com.google.ads.*;
+
 import java.util.Random;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.LightingColorFilter;
 import android.graphics.Typeface;
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
@@ -25,6 +29,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TabHost;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -52,6 +57,8 @@ public class nuclear extends Activity implements LocationListener{
 	
 	protected static final float ENABLE_RADIUS = 10.0f;
 	protected static final float STEPPING = 25.0f;
+	
+	protected static final String MY_AD_UNIT_ID = "a14db94cbe1675d";
 	
 	int debug = 1; // 0 = sharp version, 1 = half debug, 2 = full or terminal debug mode
 	boolean menu_flag = false;
@@ -182,10 +189,34 @@ public class nuclear extends Activity implements LocationListener{
         mp.start();
 	}
 	
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		Intent mainIntent = new Intent(nuclear.this,nuclear.class);
+		nuclear.this.startActivity(mainIntent);
+		nuclear.this.finish();
+	}
+	
     public void setupMenu(){
         setContentView(R.layout.menu);
 		//Log.v(tag, "After Main");
-		
+                
+        AdView adView1 = new AdView(this, AdSize.BANNER, MY_AD_UNIT_ID);
+        LinearLayout layout = (LinearLayout)findViewById(R.id.menu_layout);
+		layout.addView(adView1);
+		AdRequest request1 = new AdRequest();
+		request1.setTesting(false);
+		try{
+			Criteria crit = new Criteria();  
+			//crit.setAccuracy(Criteria.ACCURACY_FINE);  
+			crit.setAccuracy(Criteria.NO_REQUIREMENT);  
+			String provider = lm.getBestProvider(crit, true);  
+			request1.setLocation(lm.getLastKnownLocation(provider));
+		}
+		catch(Exception e){
+			;
+		}
+		adView1.loadAd(request1);
+        
 		startButton = (Button) findViewById(R.id.startbutton);
 		startButton.setOnClickListener(new OnClickListener() {
 			//@Override
